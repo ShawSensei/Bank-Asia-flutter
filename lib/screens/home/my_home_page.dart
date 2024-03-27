@@ -1,7 +1,7 @@
 import 'package:bank_asia_flutter/components/parallax_swiper.dart';
 import 'package:bank_asia_flutter/constants.dart';
 import 'package:bank_asia_flutter/controllers/homepage_controller.dart';
-import 'package:bank_asia_flutter/utils/Carousel_swiper.dart';
+import 'package:bank_asia_flutter/utils/carousel_swiper.dart';
 import 'package:bank_asia_flutter/utils/custom_app_bar.dart';
 import 'package:bank_asia_flutter/utils/parallax_swiper_page.dart';
 import 'package:bank_asia_flutter/utils/tab_bar_view.dart';

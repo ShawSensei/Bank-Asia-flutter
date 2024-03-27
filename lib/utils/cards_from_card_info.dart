@@ -5,8 +5,14 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class CardsFromCardInfo extends StatelessWidget {
+  final String credit, dueAmount, minimum, date;
+
   const CardsFromCardInfo({
     super.key,
+    required this.credit,
+    required this.dueAmount,
+    required this.minimum,
+    required this.date,
   });
 
   @override
@@ -39,19 +45,19 @@ class CardsFromCardInfo extends StatelessWidget {
                 ),
                 TextBodyCardInfo(
                   text: 'Available Credit Limit',
-                  amount: '1,72,800.00 BDT',
+                  amount: credit,
                 ),
                 TextBodyCardInfo(
                   text: 'Total Due Amount',
-                  amount: '0.0 BDT',
+                  amount: dueAmount,
                 ),
                 TextBodyCardInfo(
                   text: 'Minimum Due',
-                  amount: '0.0 BDT',
+                  amount: minimum,
                 ),
                 TextBodyCardInfo(
                   text: 'Payment Due Date',
-                  amount: '12/11/2023',
+                  amount: date,
                 )
               ],
             )),
@@ -81,19 +87,19 @@ class CardsFromCardInfo extends StatelessWidget {
                 ),
                 TextBodyCardInfo(
                   text: 'Available Credit Limit',
-                  amount: '1,72,800.00 BDT',
+                  amount: credit,
                 ),
                 TextBodyCardInfo(
                   text: 'Total Due Amount',
-                  amount: '0.0 BDT',
+                  amount: dueAmount,
                 ),
                 TextBodyCardInfo(
                   text: 'Minimum Due',
-                  amount: '0.0 BDT',
+                  amount: minimum,
                 ),
                 TextBodyCardInfo(
                   text: 'Payment Due Date',
-                  amount: '12/11/2023',
+                  amount: date,
                 )
               ],
             )),
@@ -123,19 +129,19 @@ class CardsFromCardInfo extends StatelessWidget {
                 ),
                 TextBodyCardInfo(
                   text: 'Available Credit Limit',
-                  amount: '1,72,800.00 BDT',
+                  amount: credit,
                 ),
                 TextBodyCardInfo(
                   text: 'Total Due Amount',
-                  amount: '0.0 BDT',
+                  amount: dueAmount,
                 ),
                 TextBodyCardInfo(
                   text: 'Minimum Due',
-                  amount: '0.0 BDT',
+                  amount: minimum,
                 ),
                 TextBodyCardInfo(
                   text: 'Payment Due Date',
-                  amount: '12/11/2023',
+                  amount: date,
                 )
               ],
             )),
