@@ -11,8 +11,12 @@ class CarouselSwiper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Trigger function when the screen is built
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      c.fetchCardInfo();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      //c.fetchCardInfo();
+      c.getCreditCardInfo();
+      await c.getCardInfo(c.cards.value[c.currentIndex.value].cardNo!);
+      await c.getLast10Transaction(c.cards.value[c.currentIndex.value].cardNo!);
+      await c.getStatement(c.cards.value[c.currentIndex.value].cardNo!);
     });
 
     if (c.isLoading.value) {
@@ -31,7 +35,7 @@ class CarouselSwiper extends StatelessWidget {
                   return Container(
                     padding: EdgeInsets.all(8), // Add padding here
                     child: Image.asset(
-                      card.imagePath!,
+                      card.imgPath!,
                       // Access imagePath property of CardInfoModel
                       fit: BoxFit.contain, // Fit the image within the container
                     ),
@@ -68,11 +72,11 @@ class CarouselSwiper extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        c.cards.value[c.currentIndex.value].name!,
+                        c.cards.value[c.currentIndex.value].cardTitle!,
                         style: TextStyle(color: Colors.white),
                       ),
                       Text(
-                        c.cards.value[c.currentIndex.value].id!,
+                        c.cards.value[c.currentIndex.value].cardNo!,
                         style: TextStyle(color: Colors.white),
                       ),
                     ],
@@ -98,6 +102,9 @@ class CarouselSwiper extends StatelessWidget {
                       duration: Duration(milliseconds: 300),
                       curve: Curves.linear,
                     );
+                    c.getCardInfo(c.cards.value[c.currentIndex.value].cardNo!);
+                    c.getLast10Transaction(c.cards.value[c.currentIndex.value].cardNo!);
+                    c.getStatement(c.cards.value[c.currentIndex.value].cardNo!);
                   },
                 ),
               ),
@@ -120,6 +127,9 @@ class CarouselSwiper extends StatelessWidget {
                       duration: Duration(milliseconds: 300),
                       curve: Curves.linear,
                     );
+                    c.getCardInfo(c.cards.value[c.currentIndex.value].cardNo!);
+                    c.getLast10Transaction(c.cards.value[c.currentIndex.value].cardNo!);
+                    c.getStatement(c.cards.value[c.currentIndex.value].cardNo!);
                   },
                 ),
               ),

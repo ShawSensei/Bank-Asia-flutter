@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../constants.dart';
+import '../constants/ui_constants.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key, required this.title});
@@ -11,7 +11,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(title,style: TextStyle(color: kWhiteColor),),
+      title: Text(
+        title,
+        style: TextStyle(color: kWhiteColor),
+      ),
       titleSpacing: 10,
       centerTitle: true,
       toolbarHeight: 80,

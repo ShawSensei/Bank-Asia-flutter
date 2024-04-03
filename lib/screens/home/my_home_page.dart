@@ -1,5 +1,5 @@
 import 'package:bank_asia_flutter/components/parallax_swiper.dart';
-import 'package:bank_asia_flutter/constants.dart';
+import 'package:bank_asia_flutter/constants/ui_constants.dart';
 import 'package:bank_asia_flutter/controllers/homepage_controller.dart';
 import 'package:bank_asia_flutter/utils/carousel_swiper.dart';
 import 'package:bank_asia_flutter/utils/custom_app_bar.dart';

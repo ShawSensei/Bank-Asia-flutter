@@ -31,10 +31,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class CardList {
-  static Future<List<CardInfoModel>> fetchCardInfo() async {
-    final response = await http
-        .get(Uri.parse('http://10.11.201.52:81/pracBankAsia/api/card-info'));
-    
+  static Future<List<CardInfoModel>> fetchCards() async {
+    final response = await http.get(Uri.parse('http://10.11.201.52:81/pracBankAsia/api/card-info'));
+
     debugPrint("${response.statusCode}");
 
     if (response.statusCode == 200) {

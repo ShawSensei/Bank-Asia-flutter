@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.10+1 #for svg
   http: ^1.2.1
+  uuid: ^4.3.3
+  pointycastle: ^3.7.4
+  basic_utils: ^5.7.0
 
 
 dev_dependencies:

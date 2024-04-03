@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../responseModels/card_info_res_model.dart';
 import '../../utils/cards_from_card_info.dart';
 
 // class CardInfoFragment extends StatelessWidget {
@@ -19,9 +20,9 @@ import '../../utils/cards_from_card_info.dart';
 import '../../models/card_model.dart'; // Import CardInfoModel
 
 class CardInfoFragment extends StatefulWidget {
-  final CardInfoModel? cardInfo; // Receive CardInfoModel as a parameter
+  final CardInfoResModel cardInfo; // Receive CardInfoResModel as a parameter
 
-  CardInfoFragment({super.key, this.cardInfo});
+  CardInfoFragment({super.key, required this.cardInfo});
 
   @override
   _CardInfoFragmentState createState() => _CardInfoFragmentState();
@@ -32,13 +33,14 @@ class _CardInfoFragmentState extends State<CardInfoFragment> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: CardsFromCardInfo(
-        credit: widget.cardInfo!.credit!,
+        credit: widget.cardInfo!.accountNo!,
         // Use credit from CardInfoModel
-        dueAmount: widget.cardInfo!.dueAmount!,
+        dueAmount: widget.cardInfo!.outstandingUSD!,
         // Use dueAmount from CardInfoModel
-        minimum: widget.cardInfo!.minimum!,
+        minPaymentBDT: widget.cardInfo!.minPaymentBDT!,
         // Use minimum from CardInfoModel
-        date: widget.cardInfo!.date!, // Use date from CardInfoModel
+        date: widget.cardInfo!.paymentDueDate!,
+        minPaymentUSD: widget.cardInfo!.minPaymentUSD!, // Use date from CardInfoModel
       ),
     );
   }

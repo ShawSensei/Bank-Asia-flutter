@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
+import '../constants/ui_constants.dart';
 
 class TransactionBody extends StatelessWidget {
   const TransactionBody({

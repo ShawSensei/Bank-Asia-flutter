@@ -2,10 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../constants.dart';
+import '../../constants/ui_constants.dart';
 import '../../utils/transaction_body.dart';
 
 class Last10TransactionFragment extends StatelessWidget {
+  final String date, id, amount;
+
+  Last10TransactionFragment({required this.date, required this.id, required this.amount});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -47,54 +51,54 @@ class Last10TransactionFragment extends StatelessWidget {
             child: Column(
               children: [
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
                 TransactionBody(
-                  date: '01/09/ 2022',
-                  particulars: 'NPSB IBFT 2551030065869 from Bank Asia',
-                  amount: '-10,000',
+                  date: date,
+                  particulars: 'NPSB IBFT $id from Bank Asia',
+                  amount: amount,
                 ),
               ],
             ),

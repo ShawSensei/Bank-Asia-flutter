@@ -1,22 +1,20 @@
 import 'package:bank_asia_flutter/controllers/cards_controller.dart';
 import 'package:bank_asia_flutter/models/card_model.dart';
+import 'package:bank_asia_flutter/responseModels/card_info_res_model.dart';
 import 'package:bank_asia_flutter/utils/text_body_card_info.dart';
 import 'package:bank_asia_flutter/utils/title_with_btn.dart';
 import 'package:bank_asia_flutter/utils/transaction_body.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-import '../constants.dart';
+import '../constants/ui_constants.dart';
 import '../controllers/homepage_controller.dart';
 import '../screens/details/card_info_fragment.dart';
 import '../screens/details/last_10_transaction_fragment.dart';
 import '../screens/details/statement_fragment.dart';
 
 class FragmentView extends StatelessWidget {
-  final MyHomePageController homepageController =
-      Get.put(MyHomePageController());
+  final MyHomePageController homepageController = Get.put(MyHomePageController());
   final CardsController cardsController = Get.put(CardsController());
 
   @override
@@ -45,8 +43,7 @@ class FragmentView extends StatelessWidget {
                 Expanded(
                   flex: 6,
                   child: Container(
-                    margin:
-                        EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
+                    margin: EdgeInsets.symmetric(horizontal: kDefaultPadding / 2),
                     child: buildButton(1, "Last 10 Transaction"),
                   ),
                 ),
@@ -66,21 +63,19 @@ class FragmentView extends StatelessWidget {
                   index: homepageController.currentIndex.value,
                   children: [
                     CardInfoFragment(
-                      cardInfo: CardInfoModel(
-                        credit: cardsController.cards
-                            .value[cardsController.currentIndex.value].credit!,
-                        dueAmount: cardsController
-                            .cards
-                            .value[cardsController.currentIndex.value]
-                            .dueAmount!,
-                        minimum: cardsController.cards
-                            .value[cardsController.currentIndex.value].minimum!,
-                        date: cardsController.cards
-                            .value[cardsController.currentIndex.value].date!,
-                      ),
+                      cardInfo: cardsController.cardInfo.value,
+                      //cardInfo: CardInfoResModel(),
                     ),
-                    Last10TransactionFragment(),
-                    StatementFragment(),
+                    Last10TransactionFragment(
+                      date: cardsController.last10Transaction.value.paymentDueDate!,
+                      id: cardsController.cardInfo.value.accountNo!,
+                      amount: cardsController.last10Transaction.value.minPaymentBDTS!,
+                    ),
+                    StatementFragment(
+                      clientId: cardsController.cardInfo.value.accountNo!,
+                      statementDate: cardsController.statement.value.nextStatementDate!!,
+                      paymentDate: cardsController.statement.value.minPaymentBDTS!,
+                    ),
                   ],
                 ),
               ),
@@ -92,12 +87,8 @@ class FragmentView extends StatelessWidget {
   }
 
   Widget buildButton(int index, String text) {
-    Color colo = index == homepageController.currentIndex.value
-        ? kPrimaryColor
-        : Colors.white;
-    Color texColo = index == homepageController.currentIndex.value
-        ? Colors.white
-        : Colors.black87;
+    Color colo = index == homepageController.currentIndex.value ? kPrimaryColor : Colors.white;
+    Color texColo = index == homepageController.currentIndex.value ? Colors.white : Colors.black87;
 
     return MaterialButton(
       onPressed: () => homepageController.changeView(index),

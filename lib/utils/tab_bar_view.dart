@@ -1,4 +1,4 @@
-import 'package:bank_asia_flutter/constants.dart';
+import 'package:bank_asia_flutter/constants/ui_constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomTabBar extends StatelessWidget {

@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import '../../constants/ui_constants.dart';
 import '../../utils/text_body_card_info.dart';
 
 class StatementFragment extends StatelessWidget {
+  final String clientId, statementDate, paymentDate;
+
+  StatementFragment(
+      {required this.clientId,
+      required this.statementDate,
+      required this.paymentDate});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -31,15 +38,15 @@ class StatementFragment extends StatelessWidget {
                 children: [
                   TextBodyCardInfo(
                     text: 'Client ID',
-                    amount: '2596490',
+                    amount: clientId,
                   ),
                   TextBodyCardInfo(
                     text: 'Statement Date',
-                    amount: '28/10/2023',
+                    amount: statementDate,
                   ),
                   TextBodyCardInfo(
                     text: 'Payment Date',
-                    amount: '12/11/2023',
+                    amount: paymentDate,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -51,8 +58,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.8); // Adjust opacity as needed
@@ -64,7 +71,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
@@ -93,8 +100,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.7); // Adjust opacity as needed
@@ -106,7 +113,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
@@ -154,15 +161,15 @@ class StatementFragment extends StatelessWidget {
                 children: [
                   TextBodyCardInfo(
                     text: 'Client ID',
-                    amount: '2596490',
+                    amount: clientId,
                   ),
                   TextBodyCardInfo(
                     text: 'Statement Date',
-                    amount: '28/10/2023',
+                    amount: statementDate,
                   ),
                   TextBodyCardInfo(
                     text: 'Payment Date',
-                    amount: '12/11/2023',
+                    amount: paymentDate,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -174,8 +181,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.8); // Adjust opacity as needed
@@ -187,7 +194,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
@@ -216,8 +223,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.7); // Adjust opacity as needed
@@ -229,7 +236,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
@@ -277,15 +284,15 @@ class StatementFragment extends StatelessWidget {
                 children: [
                   TextBodyCardInfo(
                     text: 'Client ID',
-                    amount: '2596490',
+                    amount: clientId,
                   ),
                   TextBodyCardInfo(
                     text: 'Statement Date',
-                    amount: '28/10/2023',
+                    amount: statementDate,
                   ),
                   TextBodyCardInfo(
                     text: 'Payment Date',
-                    amount: '12/11/2023',
+                    amount: paymentDate,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -297,8 +304,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.8); // Adjust opacity as needed
@@ -310,7 +317,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
@@ -339,8 +346,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.7); // Adjust opacity as needed
@@ -352,7 +359,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
@@ -400,15 +407,15 @@ class StatementFragment extends StatelessWidget {
                 children: [
                   TextBodyCardInfo(
                     text: 'Client ID',
-                    amount: '2596490',
+                    amount: clientId,
                   ),
                   TextBodyCardInfo(
                     text: 'Statement Date',
-                    amount: '28/10/2023',
+                    amount: statementDate,
                   ),
                   TextBodyCardInfo(
                     text: 'Payment Date',
-                    amount: '12/11/2023',
+                    amount: paymentDate,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -420,8 +427,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.8); // Adjust opacity as needed
@@ -433,7 +440,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
@@ -462,8 +469,8 @@ class StatementFragment extends StatelessWidget {
                           onPressed: () {},
                           style: ButtonStyle(
                             overlayColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                                  (Set<MaterialState> states) {
+                                MaterialStateProperty.resolveWith<Color>(
+                              (Set<MaterialState> states) {
                                 if (states.contains(MaterialState.pressed)) {
                                   return Colors.blue.withOpacity(
                                       0.7); // Adjust opacity as needed
@@ -475,7 +482,7 @@ class StatementFragment extends StatelessWidget {
                             side: MaterialStateProperty.all(
                                 BorderSide(color: kPrimaryColor)),
                             foregroundColor:
-                            MaterialStateProperty.all(Colors.black87),
+                                MaterialStateProperty.all(Colors.black87),
                             shape: MaterialStateProperty.all(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(
